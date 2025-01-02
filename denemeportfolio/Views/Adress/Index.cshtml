@@ -1,0 +1,39 @@
+﻿@model List<denemeportfolio.Models.TblAdress>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Adress</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Website</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AdressId</td>
+            <td>@item.Adress</td>
+            <td>@item.Phone</td>
+            <td>@item.Email</td>
+            <td>@item.Website</td>
+            <td><a href="/Adress/UpdateAdress/@item.AdressId" class="btn btn-warning">Güncelle</a> </td>
+            <td><a href="/Adress/DeleteAdress/@item.AdressId" class="btn btn-danger">SİL</a> </td>
+        </tr>
+
+
+
+
+    }
+
+</table>
+
+<td><a href="/Adress/CreateAdress" class="btn btn-success">Yeni Adres Ekle</a></td>

@@ -1,0 +1,26 @@
+﻿@model denemeportfolio.Models.TblFeature
+
+@{
+    ViewBag.Title = "UpdateFeatue";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>About Güncelleme Sayfası</h3>
+
+@using (Html.BeginForm("UpdateFeature", "Feature", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.FeatureId)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FeatureTitle)
+        @Html.TextBoxFor(model => model.FeatureTitle, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FeatureSubtitle)
+        @Html.TextAreaFor(model => model.FeatureSubtitle, new { @class = "form-control" })
+    </div>
+
+
+    <button type="submit" class="btn btn-warning">Güncelle</button>
+}

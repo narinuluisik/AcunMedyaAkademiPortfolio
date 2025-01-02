@@ -1,0 +1,41 @@
+﻿@model List<denemeportfolio.Models.TblProject>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+ <h2> Projelerim</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>İsim</th>
+        <th>Resim</th>
+        <th>Category</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.ProjectId</td>
+    <td>@item.ProjectName</td>
+    <td>
+        <img src="@item.ProjectImageUrl" alt="Proje Resmi" style="max-width: 100px; max-height: 100px;" />
+    </td>
+    <td>@item.ProjectCategory</td>
+
+    <td><a href="/Project/UpdateProject/@item.ProjectId" class="btn btn-warning">Güncelle</a> </td>
+    <td><a href="/Project/DeleteProject/@item.ProjectId" class="btn btn-danger">SİL</a> </td>
+
+</tr>
+
+
+
+
+    }
+
+</table>
+
+<td><a href="/Project/CreateProject" class="btn btn-success">Yeni proje Ekle</a></td>

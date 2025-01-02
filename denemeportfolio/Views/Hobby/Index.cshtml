@@ -1,0 +1,37 @@
+﻿@model List<denemeportfolio.Models.TblHobby>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>İcon</th>
+        <th>başlık</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.HobbyId</td>
+            <td>@item.IconUrl</td>
+            <td>@item.Title</td>
+           
+            <td><a href="/Hobby/UpdateHobby/@item.HobbyId" class="btn btn-warning">Güncelle</a> </td>
+            <td><a href="/Hobby/DeleteHobby/@item.HobbyId" class="btn btn-danger">SİL</a> </td>
+
+        </tr>
+
+
+
+
+    }
+
+</table>
+
+<td><a href="/Hobby/CreateHobby" class="btn btn-success">Yeni Hobby</a></td>

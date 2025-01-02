@@ -1,0 +1,24 @@
+﻿@model denemeportfolio.Models.TblFeature
+@{
+    ViewBag.Title = "CreateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Referans Ekleme</h2>
+
+<form method="post">
+    <label>Feature başlığı</label>
+    @Html.TextBoxFor(x => x.FeatureTitle, new { @class = "form-control" })
+
+    <label>Feature alt başlığı</label>
+    @Html.TextBoxFor(x => x.FeatureSubtitle, new { @class = "form-control" })
+
+   
+
+    <label>Feature Resmi</label>
+    @Html.TextBoxFor(x => x.FeatureImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Feature kaydet</button>
+</form>
+
+
