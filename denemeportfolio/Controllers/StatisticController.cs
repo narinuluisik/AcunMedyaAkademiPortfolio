@@ -13,9 +13,9 @@ namespace denemeportfolio.Controllers
         DbPortfolioEntities1 db = new DbPortfolioEntities1();
         public ActionResult Index()
         {
-            ViewBag.categoryCount = db.TblCategory.Count();
-            ViewBag.projectCount = db.TblProject.Count();
-            ViewBag.skillCount = db.TblSkill.Count();
+        ViewBag.categoryCount = db.TblCategory.Count();
+        ViewBag.projectCount = db.TblProject.Count();
+        ViewBag.skillCount = db.TblSkill.Count();
             ViewBag.skillAvgValue = db.TblSkill.Average(x => x.Value);
             ViewBag.lastSkillTitleName = db.GetLastSkillTitle().FirstOrDefault();
             ViewBag.mvcCategoryProjectCount = db.TblProject.Where(x => x.ProjectCategory == 4).Count();
