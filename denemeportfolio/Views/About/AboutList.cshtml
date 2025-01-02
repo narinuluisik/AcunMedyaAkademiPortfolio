@@ -1,0 +1,49 @@
+﻿@model List<denemeportfolio.Models.TblAbout>
+
+@{
+    ViewBag.Title = "About List";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>About</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Açıklama</th>
+            <th>Resim</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.AboutId</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                {
+                    <img src="@item.ImageUrl" alt="@item.Title" style="width: 50px; height: 50px;" />
+                }
+                else
+                {
+                    <span>Simge yok</span>
+                }
+
+            </td>
+            <td>
+            <td><a a href="/About/UpdateAbout/@item.AboutId" class="btn btn-warning">Güncelle</a> </td>
+
+            </td>
+            <td><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-danger">SİL</a> </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("CreateAbout")" class="btn btn-success">Yeni About Ekle</a>

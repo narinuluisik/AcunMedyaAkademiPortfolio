@@ -1,0 +1,34 @@
+﻿@model denemeportfolio.Models.TblProject
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2> Proje Güncelleme</h2>
+
+@using (Html.BeginForm("UpdateProject", "Project", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.ProjectId)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProjectName)
+        @Html.TextBoxFor(model => model.ProjectName, new { @class = "form-control" })
+    </div>
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProjectImageUrl)
+        <input type="text" class="form-control" name="ProjectImageUrl" value="@Model.ProjectImageUrl" />
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProjectCategory)
+        @Html.TextBoxFor(model => model.ProjectCategory, new { @class = "form-control" })
+    </div>
+
+
+    <button type="submit" class="btn btn-warning">Güncelle</button>
+}

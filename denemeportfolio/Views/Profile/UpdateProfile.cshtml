@@ -1,0 +1,31 @@
+﻿@model denemeportfolio.Models.TblProfile
+
+@{
+    ViewBag.Title = "Update Profile";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>About Güncelleme Sayfası</h3>
+
+@using (Html.BeginForm("UpdateProfile", "Profile", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.ProfileId)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Birthday)
+        @Html.TextAreaFor(model => model.Birthday, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Phone)
+        @Html.TextAreaFor(model => model.Phone, new { @class = "form-control" })
+    </div>
+ 
+
+ 
+    <button type="submit" class="btn btn-warning">Güncelle</button>
+}

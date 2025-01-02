@@ -1,0 +1,22 @@
+﻿@model denemeportfolio.Models.TblService
+
+@{
+    ViewBag.Title = "CreateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Hizmet Ekleme</h2>
+
+<form method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", rows = 4 })
+
+    <label>Simge (Icon) URL</label>
+    @Html.TextBoxFor(x => x.IconUrl, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Hizmeti Kaydet</button>
+</form>

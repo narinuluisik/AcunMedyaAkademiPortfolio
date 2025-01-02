@@ -1,0 +1,28 @@
+﻿@model denemeportfolio.Models.TblProfile
+@{
+    ViewBag.Title = "CreateProfile";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Profil Ekleme</h2>
+
+<form method="post">
+    <label>Profil ismi</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+
+    <label>Dogum Gunu</label>
+    @Html.TextBoxFor(x => x.Birthday, new { @class = "form-control" })
+
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+
+   
+    <br />
+    <button class="btn btn-info">Profili kaydet</button>
+</form>
+
+

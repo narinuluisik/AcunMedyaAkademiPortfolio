@@ -1,0 +1,21 @@
+﻿@model denemeportfolio.Models.TblCategory
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2> Kategori Güncelleme</h2>
+
+<form method="post">
+    <label>Kategori Id</label>
+    @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control" })
+
+    <label>Kategori ismi</label>
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+
+    
+    <br />
+    <button class="btn btn-info"> kategori kaydet</button>
+</form>
+

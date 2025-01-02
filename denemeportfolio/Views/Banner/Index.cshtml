@@ -1,0 +1,36 @@
+﻿@model List<denemeportfolio.Models.TblBanner>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BannerId</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td><a href="/Banner/UpdateBanner/@item.BannerId" class="btn btn-warning">Güncelle</a> </td>
+            <td><a href="/Banner/DeleteBanner/@item.BannerId" class="btn btn-danger">SİL</a> </td>
+
+        </tr>
+
+
+
+
+    }
+
+</table>
+
+<td><a href="/Banner/CreateBanner" class="btn btn-success">Yeni Banner Ekle</a></td>

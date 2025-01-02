@@ -1,0 +1,36 @@
+﻿@model List<denemeportfolio.Models.TblFeature>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FeatureId</td>
+            <td>@item.FeatureTitle</td>
+            <td>@item.FeatureSubtitle</td>
+            <td><a href="/Feature/UpdateFeature/@item.FeatureId" class="btn btn-warning">Güncelle</a> </td>
+            <td><a href="/Feature/DeleteFeature/@item.FeatureId" class="btn btn-danger">SİL</a> </td>
+
+        </tr>
+
+
+
+
+    }
+
+</table>
+
+<td><a href="/Feature/CreateFeature" class="btn btn-success">Yeni Feature Ekle</a></td>

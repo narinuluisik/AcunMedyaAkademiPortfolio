@@ -1,0 +1,38 @@
+﻿@model List<denemeportfolio.Models.TblTestimonial>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Referanslarım</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>İsim</th>
+        <th>Mesleği</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TestimonialId</td>
+            <td>@item.TestimonialName</td>
+            <td>@item.TestimonialTitle</td>
+            <td>@item.TestimonialDescription</td>
+            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-warning">Güncelle</a> </td>
+            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-danger">SİL</a> </td>
+
+        </tr>
+
+
+
+
+    }
+
+</table>
+
+<td><a href="/Testimonial/CreateTestimonial" class="btn btn-success">Yeni Referans Ekle</a></td>
