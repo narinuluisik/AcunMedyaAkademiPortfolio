@@ -1,0 +1,41 @@
+﻿
+@model List<denemeportfolio.Models.TblService>
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Daha Fazlası</h2>
+                    <p>Web tasarımı, yazılım geliştirme, dijital pazarlama ve daha birçok alanda sunduğumuz hizmetler ile işinizi dijital dünyada büyütmek için buradayız.</p>
+                    <p><a href="#" class="btn btn-primary">Daha Fazlası</a></p>
+
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Bağlantılar</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Anasayfa</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Hakkında</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Hizmetler</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Projeler</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Hizmetlerim</h2>
+                    <ul class="list-unstyled">
+                        @foreach (var item in Model)
+                        {
+
+                            <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>@item.Title</a></li>
+
+                        }
+
+                    </ul>
+                </div>
+            </div>

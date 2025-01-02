@@ -1,0 +1,26 @@
+﻿
+@model List<denemeportfolio.Models.TblAbout>
+
+@foreach (var item in Model)
+{
+    <span class="subheading">Hakkımda</span>
+    <h2 class="mb-2" style="font-size: 34px; text-transform: capitalize;">@item.Title</h2>
+    <p>@item.Description</p>
+}
+<style>
+    .content-section {
+        margin-left: 50px; /* Yazıyı sola kaydırır */
+        max-width: 40%; /* Yazının genişliğini sınırlar */
+        position: relative;
+        z-index: 10; /* Resmin arkasına geçmesini önler */
+    }
+
+        .content-section h2 {
+            font-size: 34px;
+            text-transform: capitalize;
+        }
+
+        .content-section p {
+            line-height: 1.6;
+        }
+</style>

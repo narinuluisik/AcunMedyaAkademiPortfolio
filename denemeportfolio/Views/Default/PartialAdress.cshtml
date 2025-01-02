@@ -1,0 +1,20 @@
+﻿@model List<denemeportfolio.Models.TblAdress>
+
+@foreach (var item in Model)
+{
+    <ul class="about-info mt-4 px-md-0 px-2">
+        <li class="d-flex">
+            <span>Address:</span>
+            <span>@item.Adress</span>
+        </li>
+        <li class="d-flex">
+            <span>Email:</span>
+            <span>@item.Email</span>
+        </li>
+        <li class="d-flex">
+            <span>Phone:</span>
+            <span>@item.Phone</span>
+        </li>
+       
+    </ul>
+}

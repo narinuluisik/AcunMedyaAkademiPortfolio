@@ -1,0 +1,27 @@
+﻿@model List<denemeportfolio.Models.TblProject>
+
+<section class="ftco-section ftco-project" id="projects-section">
+    <div class="container-fluid px-md-4">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <span class="subheading">Başarılar</span>
+                <h2 class="mb-4">Projelerimiz</h2>
+                <p>Hayalinizdeki projeyi gerçeğe dönüştürmek için çalışıyoruz. İşte bazı projelerimiz.</p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 mb-4">
+                    <div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('@item.ProjectImageUrl');">
+                        <div class="overlay"></div>
+                        <div class="text text-center p-4">
+                            <h3><a href="#">@item.ProjectName</a></h3>
+                            <span>@item.TblCategory.CategoryName </span> <!-- Kategoriyi burada kullanıyoruz -->
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

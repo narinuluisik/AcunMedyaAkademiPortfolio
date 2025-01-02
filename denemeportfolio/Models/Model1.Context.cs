@@ -27,7 +27,12 @@ namespace denemeportfolio.Models
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
+        internal object GetLastProjectTitle()
+        {
+            throw new NotImplementedException();
+        }
+
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<TblAbout> TblAbout { get; set; }
         public DbSet<TblAdress> TblAdress { get; set; }
@@ -46,5 +51,7 @@ namespace denemeportfolio.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastSkillTitle");
         }
+      
+
     }
 }

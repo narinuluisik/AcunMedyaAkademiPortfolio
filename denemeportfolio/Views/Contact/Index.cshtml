@@ -1,20 +1,31 @@
-﻿
+﻿@model List<denemeportfolio.Models.TblContact>
+
 @{
-    Layout = null;
+    ViewBag.Title = "İletişim Listesi";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<div style="background-color:yellow; margin-left:100px;margin-right:100px">
-    <h3>Mesaj Gönderme Sayfası</h3>
-    <label>Adınız Soyadınız</label>
-    <input type="text" />
-    <br />
-    <label>Mail</label>
-    <input type="text" />
-    <br />
-    <label>Konu</label>
-    <input type="text" />
-    <br />
-    <label>Mesajınız</label>
-    <textarea rows="12"></textarea>
-    <br />
-</div>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>İsim</th>
+        <th>E-Posta</th>
+        <th>Konu</th>
+        <th>Açıklama</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ContactId</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Subject</td>
+            <td>@item.Description</td>
+            <td><a href="/Contact/UpdateContact/@item.ContactId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Contact/DeleteContacts/@item.ContactId" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+<a href="/Contact/CreateContact" class="btn btn-success">Yeni İletişim Ekle</a>

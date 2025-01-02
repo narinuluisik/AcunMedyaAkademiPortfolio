@@ -4,10 +4,17 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
+<h3 İstatistiklerim></h3>
+<div class="alert alert-danger">Kategori Sayısı: @ViewBag.categoryCount</div>
+<div class="alert alert-warning">Proje Sayısı: @ViewBag.projectCount</div>
+<div class="alert alert-success">Yetenek Sayısı: @ViewBag.skillCount</div>
+<div class="alert alert-success">Referans Sayısı: @ViewBag.testimonialCount</div>
+<div class="alert alert-success">Hobi Sayısı: @ViewBag.hobbyCount</div>
 
-<div class="alert alert-danger"> kategori sayısı= @ViewBag.categoryCount</div>
-<div class="alert alert-warning"> proje sayısı= @ViewBag.projectCount</div>
-<div class="alert alert-success"> yetenek sayısı= @ViewBag.skillCount</div>
-<div class="alert alert-success"> ortalama yetenek sayısı= @ViewBag.skillAvgValue</div>
-<div class="alert alert-primary">Son Eklenen Yetenek = @ViewBag.lastSkillTitleName</div>
-<div class="alert alert-info">Asp .Net MVC proje sayısı = @ViewBag.mvcCategoryProjectCount</div>
+<div class="alert alert-success">Ortalama Yetenek Değeri: @ViewBag.skillAvgValue</div>
+
+<div class="alert alert-primary">Son Eklenen Yetenek: @ViewBag.lastSkillTitleName</div>
+
+<div class="alert alert-info">Asp.Net MVC Projeleri Sayısı: @ViewBag.mvcCategoryProjectCount</div>
+<div class="alert alert-info">Web Projeleri Sayısı: @ViewBag.mvcCategoryProjectCount</div>
+<div class="alert alert-info">Mobil Projeleri Sayısı: @ViewBag.mvcCategoryProjectCount</div>

@@ -12,8 +12,12 @@ namespace denemeportfolio.Controllers
         // GET: About
         public ActionResult AboutList()
         {
-            var Values = db.TblAbout.ToList();
-            return View(Values);
+            ViewBag.Abouts = db.TblAbout.ToList();
+            ViewBag.Hobbies = db.TblHobby.ToList();
+            ViewBag.Services = db.TblService.ToList();
+            ViewBag.Projects = db.TblProject.ToList();
+
+            return View();
         }
 
         [HttpGet]

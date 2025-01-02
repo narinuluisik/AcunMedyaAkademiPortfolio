@@ -14,11 +14,14 @@ namespace denemeportfolio.Models
     
     public partial class TblProject
     {
+        internal int Value;
+
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
         public string ProjectImageUrl { get; set; }
         public Nullable<int> ProjectCategory { get; set; }
     
         public virtual TblCategory TblCategory { get; set; }
+     
     }
 }

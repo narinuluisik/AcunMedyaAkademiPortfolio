@@ -24,7 +24,7 @@
     <td>
         <img src="@item.ProjectImageUrl" alt="Proje Resmi" style="max-width: 100px; max-height: 100px;" />
     </td>
-    <td>@item.ProjectCategory</td>
+    <td> <span>@item.TblCategory.CategoryName </span> </td>
 
     <td><a href="/Project/UpdateProject/@item.ProjectId" class="btn btn-warning">Güncelle</a> </td>
     <td><a href="/Project/DeleteProject/@item.ProjectId" class="btn btn-danger">SİL</a> </td>
