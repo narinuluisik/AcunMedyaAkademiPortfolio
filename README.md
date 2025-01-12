@@ -1,7 +1,7 @@
 
-# Acun Medya Akademi Portföy Sitesi
+# Acun Medya Akademi Portfolyo Sitesi
 
-Bu proje, Acun Medya Akademi için bir portföy sitesidir. ASP.NET MVC ve Entity Framework kullanılarak geliştirilmiştir.
+Bu proje, Acun Medya Akademi için bir portfolyo sitesidir. ASP.NET MVC ve Entity Framework kullanılarak geliştirilmiştir.
 
 ## Kullanılan Teknolojiler
 
